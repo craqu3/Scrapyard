@@ -8,21 +8,20 @@ mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_hands = mp.solutions.hands
 
-
+# Inicializa a placa Arduino
+try:
+    print("Conectando com a placa Arduino...")
+    board = pyfirmata2.Arduino(pyfirmata2.Arduino.AUTODETECT)
+    ledPin = board.get_pin('d:10:p')
+    ledPin2 = board.get_pin('d:11:p')
+    ledPin.write(1.0)
+    print("Conexão com a placa Arduino estabelecida.")
+except Exception as e:
+    print(f"Erro ao conectar com a placa Arduino: {e}")
+    board = None
+    
 def webcam():
-    # Inicializa a placa Arduino
-    try:
-        board = pyfirmata2.Arduino(pyfirmata2.Arduino.AUTODETECT)
-        ledPin = board.get_pin('d:10:p')
-        ledPin2 = board.get_pin('d:11:p')
-        ledPin.write(1.0)
-        print("Conexão com a placa Arduino estabelecida.")
-    except Exception as e:
-        print(f"Erro ao conectar com a placa Arduino: {e}")
-        board = None
-        
-    time.sleep(10)
-            
+    print("Connecting camera")            
     cap = cv2.VideoCapture(0)
     with mp_hands.Hands(
         model_complexity=0, 
