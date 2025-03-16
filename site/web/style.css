@@ -1,6 +1,42 @@
 
 body {
-    background-color: rgb(97, 95, 95);
+    background-color: grey;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to top, rgba(52, 52, 56, 2.7), rgba(20, 20, 25, 2.9));
+    margin-bottom: 10%;
+    
+}
+
+button {
+    font-size: 20px;
+    padding: 20px;
+    margin: 10px;
+    color: aliceblue;
+    background: transparent;
+    border-color: transparent;
+    box-sizing: none;
+}
+
+
+button.logo {
+    margin: 0;
+}
+
+button.Login {
+    margin-left: auto;
+}
+
+p {
+    text-indent: 10px;
 }
 
 main {
@@ -10,18 +46,15 @@ main {
     margin: auto;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    background-color: linear-gradient(to bottom, );
+    background: linear-gradient(to bottom, rgba(52, 52, 56, 0.9), rgba(20, 20, 25, 0.9));
     box-shadow: 10px 20px 30px;
-    width: 500px;
-    height: 500px;
+    width: 50%;
+    height: 1600px;
     border-radius: 10px;
 }
 
 h1.titulo {
-    margin-top: 10%;
-    text-align: center;
     text-shadow: 1px 1px 7px;
-    color: rgb(88, 216, 95);
 }
 
 
@@ -32,15 +65,24 @@ main div {
     text-align: left;
     font-size: 13px;
     margin: auto;
-    
+
 }
 
-.footer {
+.endbar {
+    text-align: justify;
+    color: aqua;
+    margin-bottom: auto;
     padding: 20px;
-    color: rgb(19, 80, 4);
-    text-decoration: none;
 }
 
-.footer:hover{
-    color: rgb(86, 213, 93);
+.fim {
+    color: darkgreen;
+    text-decoration: none;
+    position: relative;
+    top: 350px;
 }
+
+.fim:hover {
+    color: rgb(88, 216, 95);
+}
+
