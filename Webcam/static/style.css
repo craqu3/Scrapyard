@@ -1,0 +1,46 @@
+
+body {
+    background-color: rgb(97, 95, 95);
+}
+
+main {
+    background-color: rgba(52, 52, 56, 0.788);
+    color: rgb(88, 216, 95);
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: linear-gradient(to bottom, );
+    box-shadow: 10px 20px 30px;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+h1.titulo {
+    margin-top: 10%;
+    text-align: center;
+    text-shadow: 1px 1px 7px;
+    color: rgb(88, 216, 95);
+}
+
+
+
+main div {
+    padding: 20px;
+    color: rgb(86, 213, 93);
+    text-align: left;
+    font-size: 13px;
+    margin: auto;
+    
+}
+
+.footer {
+    padding: 20px;
+    color: rgb(19, 80, 4);
+    text-decoration: none;
+}
+
+.footer:hover{
+    color: rgb(86, 213, 93);
+}
