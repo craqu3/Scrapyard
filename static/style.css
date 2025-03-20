@@ -5,6 +5,7 @@ body {
 }
 
 nav {
+    max-height: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,6 +18,7 @@ nav {
 }
 
 button {
+    height: 100%;
     font-size: 20px;
     padding: 20px;
     margin: 10px;
@@ -34,6 +36,25 @@ button.logo {
 button.Login {
     margin-left: auto;
 }
+
+button.Home {
+    height: 65px;
+    top: 0;
+    bottom: 0;
+    padding: 10px;
+    box-shadow: 0px 2px 0px white;
+    color: rgb(21, 75, 223);
+}
+
+button.Home:hover {
+    height: 65px;
+    top: 0;
+    bottom: 0;
+    padding: 10px;
+    box-shadow: 0px 0px 0px 0px white;
+    color: rgb(10, 19, 143);
+}
+
 
 p {
     text-indent: 10px;

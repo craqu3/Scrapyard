@@ -7,6 +7,14 @@ app = Flask(__name__, template_folder="./templates", static_folder='./static', s
 def index():
     return render_template('home.html')
 
+@app.route('/dicas.html')
+def dicas():
+    return render_template('dicas.html')
+
+@app.route('/dicas2.html')
+def dicas2():
+    return render_template('dicas2.html')
+
 @app.route('/video')
 def video():
     return Response(webcam(), mimetype='multipart/x-mixed-replace; boundary=frame')

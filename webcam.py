@@ -1,12 +1,12 @@
 import cv2
 import mediapipe as mp
 import pyfirmata2
-import time
-
+import random
 
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_hands = mp.solutions.hands
+
 
 # Inicializa a placa Arduino
 try:
@@ -19,7 +19,10 @@ try:
 except Exception as e:
     print(f"Erro ao conectar com a placa Arduino: {e}")
     board = None
-    
+
+
+dedo = random.randint(1,11)
+print(dedo)
 def webcam():
     print("Connecting camera")            
     cap = cv2.VideoCapture(0)
@@ -67,16 +70,15 @@ def webcam():
 
                     
                     
-                    if board:
+                    if board != None:
                         if fingerCount == 7:
                             ledPin.write(0)
                             ledPin2.write(1)
-                            ledPin.write(0)
+            
                             
                         else:
-                            ledPin.write(0)
-                            ledPin.write(1)
                             ledPin2.write(0)
+                            ledPin.write(1)
 
                     mp_drawing.draw_landmarks(
                         image,
@@ -93,6 +95,6 @@ def webcam():
                    b'Content-Type: image/jpeg\r\n\r\n' + image + b'\r\n\r\n')
 
     cap.release()
-    if board:
+    if board != None:
         board.exit()
     cv2.destroyAllWindows()
